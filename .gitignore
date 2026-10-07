@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Notebooks
+.ipynb_checkpoints/
+
+# Model weights and caches (large)
+checkpoints/
+*.safetensors
+*.bin
+*.pt
+.cache/
+
+# Archives
+*.zip

@@ -1,0 +1,16 @@
+# Cell 1
+!git clone https://github.com/<you>/minilm-distillation.git
+%cd minilm-distillation/SST-2
+!pip install -q datasets matplotlib pandas
+
+# Cell 2  (fine-tune teacher, ~3 epochs)
+!python train_teacher.py
+
+# Cell 3  (cache teacher logits + all students, CE vs KD)
+!python train_distill.py
+
+# Cell 4
+!python benchmark.py --all
+
+# Cell 5
+!python report.py --zip
